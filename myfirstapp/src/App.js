@@ -15,7 +15,7 @@ function App() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('${process.env.REACT_APP_API_URL}/submit', form);
+      await axios.post('https://form-backend-44dr.onrender.com/submit', form);
       alert('Submitted successfully!');
       setForm({ name: '', email: '', message: '' });
     } catch (err) {
